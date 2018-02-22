@@ -1,0 +1,46 @@
+{
+  "name": "website-2018",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "gulp"
+  },
+  "dependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-core": "^6.26.0",
+    "bootstrap": "^4.0.0",
+    "eslint": "^4.18.1",
+    "jquery": "^3.3.1",
+    "popper": "^1.0.1",
+    "popper.js": "^1.12.9",
+    "uglifyjs": "^2.4.11",
+    "webpack": "^2.7.0"
+  },
+  "author": "thomas <bonjour@thomasguesnon.fr>",
+  "description": "Website 2018",
+  "repository": "https://github.com/patjennings/website-2018.git",
+  "license": "GNU GPLv3",
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "concurrently": "^3.5.1",
+    "del": "^3.0.0",
+    "eslint-loader": "^1.9.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-coffee": "^2.3.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-flatten": "^0.3.1",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-inline-fonts": "^1.0.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "merge-stream": "^1.0.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0"
+  }
+}
