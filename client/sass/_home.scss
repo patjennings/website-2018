@@ -1,3 +1,5 @@
+@import "mixins";
+
 .card-columns {
   @include media-breakpoint-only(lg) {
     column-count: 4;
@@ -8,18 +10,27 @@
   .card{
       border: 0;
       margin-bottom: 1.5rem;
+  }
+
+  a.card{
+      @include transition(all, 0.2s, ease-out);
       color: inherit;
 
-      @include transition(all, 0.2s, ease-in-out);
-      // transition: all 0.2s ease-in-out;
+      img{
+          opacity: 1;
+      }
+
+      // transition: all 0.2s ease-out;
 
       &:hover{
           text-decoration: none;
+          color: #FFF;
+          background: var(--primary);
           // opacity: 0.5;
-      }
 
-      img{
-         // border: 10px solid var(--white);
+          img{
+              opacity: 0.5;
+          }
       }
   }
   // column-count: 6;
