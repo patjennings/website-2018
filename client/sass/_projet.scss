@@ -1,0 +1,38 @@
+@import "mixins";
+
+// .grid-item, .grid-sizer { width: 20%; }
+#wrapper{
+  .container--projet{
+    .projet--title{
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+
+      h1{
+        font-size: 3.25rem;
+      }
+    }
+    .projet--texte{
+      margin-bottom: 1rem;
+    }
+    .projet--image{
+      margin-bottom: 4rem;
+      opacity: 0;
+
+      &.-in-view{
+        animation: cardFadeIn 0.5s ease-in-out;
+        opacity: 1;
+      }
+      @keyframes cardFadeIn{
+        0%{
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100%{
+          opacity: 1;
+          transform: translateY(0px);
+        }
+      }
+
+    }
+  }
+}

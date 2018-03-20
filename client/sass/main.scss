@@ -3,15 +3,23 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import "fonts";
 @import "icons";
+@import "general";
+@import "header";
+
+@import "preloader";
+
 @import "home";
+@import "projet";
+@import "mosaique";
 
 :root {
-   --font-family-sans-serif: "serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-sans-serif: "sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   --font-family-serif: "serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: "mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 html, body {
-  font-family: var(--font-family-sans-serif);
+  font-family: var(--font-family-serif);
   background: var(--light);
   // font-size: 24px;
 }

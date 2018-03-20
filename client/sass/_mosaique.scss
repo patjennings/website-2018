@@ -1,0 +1,30 @@
+.mosaique{
+  // border: 10px solid #000;
+
+  ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+
+    li{
+      list-style: none;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .mosaique ul li { width: 100%; }
+}
+@include media-breakpoint-up(sm) {
+  .mosaique ul li { width: 33.333%; }
+}
+@include media-breakpoint-up(md) {
+  .mosaique ul li { width: 25%; }
+}
+@include media-breakpoint-up(lg) {
+  .mosaique ul li { width: 20%; }
+}
+@include media-breakpoint-up(xl) {
+  .mosaique ul li { width: 16.667%; }
+}

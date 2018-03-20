@@ -67,10 +67,15 @@ gulp.task('fonts', function() {
       // an italic version
       fontStream.add(gulp.src(paths.fonts+`${style}-${weight}-i.woff`)
       .pipe(inline({ name: style, weight: weight, format: ['woff'], style: 'italic' })));
+
+
     });
   });
+  // Custom Arnhem added
+  fontStream.add(gulp.src(paths.fonts+`arnhem-700.woff`)
+  .pipe(inline({ name: "arnhem", weight: 700, format: ['woff'] })));
 
-  return fontStream.pipe(concat('_fonts.css')).pipe(gulp.dest('client/sass'));
+  return fontStream.pipe(concat('_fonts.scss')).pipe(gulp.dest('client/sass'));
   //return fontStream.pipe(concat('sans.css')).pipe(gulp.dest('client/sass'));
 });
 
