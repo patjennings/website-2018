@@ -1,20 +1,8 @@
 <!doctype html>
 <html class="no-js" lang="">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="public/css/all.css" />
-  <script src="public/js/jquery.min.js" type="text/javascript"></script>
-  <script src="public/js/masonry.pkgd.min.js" type="text/javascript"></script>
-  <script src="public/js/jquery.waypoints.min.js" type="text/javascript"></script>
-  <script src="public/js/all.min.js" type="text/javascript"></script>
-
-</head>
+<?php include('includes/head.php'); ?>
 
 <body>
   <!--[if lt IE 8]>
@@ -53,8 +41,8 @@
 
           if($isPublished == 'true'){
             $output = '<li>';
-              $output .= '<a href="#">';
-                $output .= '<img class="card-img-top" src="'.$thumbnail.'" alt="'.$imageTitle.'">';
+              $output .= '<a href="'.$image.'">';
+                $output .= '<img src="'.$thumbnail.'" alt="'.$imageTitle.'">';
               $output .= '</a>';
             $output .= '</li>';
             // $output .= '';
@@ -73,6 +61,7 @@
      </ul>
     </div>
   </div>
+  <?php include('includes/footer.php'); ?>
 
 </body>
 

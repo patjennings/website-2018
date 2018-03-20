@@ -86,6 +86,8 @@ gulp.task('scripts', ['clean'], function() {
     .pipe(plumber())
     .pipe(sourcemaps.init())
       // .pipe(coffee())
+      .pipe(concat('all.js'))
+      .pipe(gulp.dest('public/js'))
       .pipe(uglify())
       .pipe(concat('all.min.js'))
     .pipe(sourcemaps.write())

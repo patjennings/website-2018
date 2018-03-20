@@ -19,10 +19,11 @@
       opacity: 0;
 
       &.-in-view{
-        animation: cardFadeIn 0.5s ease-in-out;
+        // animation: cardFadeIn 0.5s ease-in-out;
+        @include animation('cardFadeIn 0.5s ease-out');
         opacity: 1;
       }
-      @keyframes cardFadeIn{
+      @include keyframes(cardFadeIn){
         0%{
           opacity: 0;
           transform: translateY(20px);

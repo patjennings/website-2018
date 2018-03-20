@@ -9,6 +9,19 @@
 
     li{
       list-style: none;
+
+      a{
+        img{
+          width: 100%;
+        }
+
+        opacity: 1;
+        @include transition(all, 0.2s, ease-in-out);
+
+        &:hover{
+          opacity: 0.5;
+        }
+      }
     }
   }
 }
