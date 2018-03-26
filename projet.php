@@ -18,29 +18,7 @@
     </div>
 
     <div id="wrapper">
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.php">
-        <img src="http://www.thomasguesnon.fr/data/files/eye_logo_dark.svg" width="30" height="30" alt="">
-      </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Travaux <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Écrits</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">À propos</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+    <?php include('includes/navbar.php'); ?>
 
     <div class="container container--projet">
 
@@ -51,7 +29,7 @@
       $imageId = 0;
 
       $projet = $json[$id];
-
+      $isPublished = $projet['published'];
 
       // echo $id;
 
@@ -69,27 +47,30 @@
         <div class="container post-content" aria-label="Content">
           <div class="row projet--title">
             <div class="col-lg-8 offset-lg-2">
-              <h1><?php echo($projet['title']) ?></h1>
+              <h1><?php if($isPublished == 'true'){ echo($projet['title']); } else { echo "Ceci n'est pas une erreur 404"; } ?></h1>
             </div>
           </div>
           <div class="row projet--texte">
             <div class="col-lg-8 offset-lg-2">
               <p>
-                <?php echo($projet['text']) ?>
+                <?php if($isPublished == 'true'){ echo($projet['text']); } else { echo ""; } ?>
               </p>
             </div>
           </div>
 
           <?php
-    foreach($projet['images'] as $image){
-      $output = '<div class="row projet--image" id="item-'.$imageId.'">';
-        $output .= '<div class="col-lg-12">';
-          $output .= '<img src="'.$image['path'].'" width="100%"/>';
-        $output .= '</div>';
-      $output .= '</div>';
-      echo $output;
-      $imageId++;
-    }
+          if($isPublished == 'true'){
+            foreach($projet['images'] as $image){
+              $output = '<div class="row projet--image" id="item-'.$imageId.'">';
+                $output .= '<div class="col-lg-12">';
+                  $output .= '<img src="'.$image['path'].'" width="100%"/>';
+                $output .= '</div>';
+              $output .= '</div>';
+              echo $output;
+              $imageId++;
+            }
+          }
+
     ?>
 
         </div>
